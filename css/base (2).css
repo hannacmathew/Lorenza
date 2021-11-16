@@ -1,0 +1,132 @@
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ============================================================
+  BOX SIZING & CLEARFIX
+============================================================ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================================
+  INFO BAR
+============================================================ */
+.info-bar {
+  padding: 5px 0;
+  background-color: #fff;
+  text-align: center;
+}
+.info-bar a.icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/core/icons-dark.png");
+  background-image: url("../img/core/icons-dark.svg"), none;
+  opacity: 0.3;
+}
+.info-bar .cmn-tut {
+  background-position: 0 0;
+}
+.info-bar .cmn-prev {
+  background-position: -30px 0;
+}
+.info-bar .cmn-next {
+  background-position: -60px 0;
+}
+.info-bar .cmn-download {
+  background-position: -90px 0;
+}
+.info-bar .cmn-archive {
+  background-position: -120px 0;
+}
+.info-bar a.icon[data-title]:after {
+  opacity: 1;
+}
+.info-bar a.icon[data-title]:hover:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20px;
+  content: attr(data-title);
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+  TEXT LEVEL SEMANTICS
+============================================================ */
+a {
+  text-decoration: none;
+  color: #4e80dc;
+}
+
+a:hover {
+  color: #818181;
+}
